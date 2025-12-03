@@ -11,9 +11,7 @@ function AboutPage() {
           ABOUT ME{" "}
         </h1>
         <p className="text-center text-black p-2  text-lg">
-          {
-            "Since beginning my journey as a freelance designer 12 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops."
-          }
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repellendus atque eveniet et fugiat, neque autem voluptatibus eligendi optio blanditiis, alias facilis enim debitis labore nemo, ducimus sapiente illo possimus!
         </p>
       </div>
     </section>
