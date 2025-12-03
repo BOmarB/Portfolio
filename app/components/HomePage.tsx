@@ -18,18 +18,18 @@ function HomePage() {
   return (
     <section
       id="home"
-      className="min-h-screen   max-w-4xl grid grid-cols-2 items-center mx-auto py-20 px-8 "
+      className="min-h-screen max-w-3xl grid grid-cols-1 md:grid-cols-2 items-center mx-auto py-20 p-4 md:px-8 "
     >
-      <div className="self-center ">
-        <h1 className=" md:text-4xl leading-tight font-extrabold ">
-          Full-stack Web developer 👋
+      <div className="">
+        <h1 className="text-2xl md:text-4xl font-extrabold ">
+          Full-stack Web Developer 👋
         </h1>
-        <p className="py-2 text-xs md:text-sm text-gray-500">
+        <p className="py-4 text-xs md:text-sm text-gray-500">
           {
             "Hi, I'm omar bouazzaoui Full-stack Developer based in Azrou, Morocco."
           }
         </p>
-        <div className="flex gap-2 pt-4">
+        <div className="flex gap-1 md:gap-2 md:pt-4">
           <a href="https://github.com/BOmarB" target="_blank">
             <FaGithub className="w-6 h-6" />
           </a>
@@ -45,16 +45,16 @@ function HomePage() {
         <Image
           src={profile}
           alt="Omar"
-          width={200}
-          height={200}
-          className="rounded-full border-gray-900 border-4 border animate"
+          width={300}
+          height={300}
+          className="rounded-full border-gray-900 border-2 md:border-4 border animate w-32 h-40 md:w-62 md:h-80"
           title="Omar Bouazzaoui"
         />
       </div>
 
       <div className="col-span-2 ">
-        <pre className=" md:text-xl text-xs font-semibold flex md:gap-8">
-          Teck Stack |
+        <pre className=" md:text-xl text-sm gap-1  font-semibold flex md:gap-8">
+          <span className="pt-1 md:p-0">Teck Stack |</span>
           <SiHtml5 className="text-[#E34F26]" title="HTML5" size={40} />
           <SiCss3 className="text-[#1572B6]" title="CSS3" size={40} />
           <SiJavascript

@@ -10,6 +10,7 @@ export default function Home() {
       <HomePage />
       <AboutPage />
       <ProjectsPage />
+      <div className="h-10"></div>
       <ContactPage />
     </div>
   );

@@ -10,6 +10,8 @@
 !.yarn/releases
 !.yarn/versions
 
+/app/components/DSC_0025.jpg
+
 # testing
 /coverage
 
