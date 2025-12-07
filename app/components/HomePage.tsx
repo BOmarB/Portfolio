@@ -22,7 +22,7 @@ function HomePage() {
     >
       <div className="">
         <h1 className="text-2xl md:text-4xl font-extrabold ">
-          Full-stack Web Developer 👋
+          Back-End Laravel Developer 👋
         </h1>
         <p className="py-4 text-xs md:text-sm text-gray-500">
           {
@@ -55,22 +55,22 @@ function HomePage() {
       <div className="col-span-2 ">
         <pre className=" md:text-xl text-sm gap-1  font-semibold flex md:gap-8">
           <span className="pt-1 md:p-0">Teck Stack |</span>
-          <SiHtml5 className="text-[#E34F26]" title="HTML5" size={40} />
-          <SiCss3 className="text-[#1572B6]" title="CSS3" size={40} />
-          <SiJavascript
-            className="text-[#F7DF1E]"
-            title="Javascript"
-            size={40}
-          />
+          <SiLaravel className="text-[#F05340]" title="Laravel" size={40} />
           <SiReact className="text-[#1ef7df]" title="React" size={40} />
+          <SiPhp className="text-[#474A8A]" title="Php" size={40} />
           <SiTailwindcss
             className="text-[#1ef7df]"
             title="Tailwindcss"
             size={40}
           />
-          <SiLaravel className="text-[#F05340]" title="Laravel" size={40} />
-          <SiPhp className="text-[#474A8A]" title="Php" size={40} />
+          <SiHtml5 className="text-[#E34F26]" title="HTML5" size={40} />
           <SiNextdotjs className="text-[#000000]" title="Next.js" size={40} />
+          <SiJavascript
+            className="text-[#F7DF1E]"
+            title="Javascript"
+            size={40}
+          />
+          <SiCss3 className="text-[#1572B6]" title="CSS3" size={40} />
         </pre>
       </div>
     </section>

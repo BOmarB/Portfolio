@@ -10,8 +10,10 @@ function AboutPage() {
         <h1 className="text-blue-500 font-extrabold text-4xl text-center p-4">
           ABOUT ME{" "}
         </h1>
-        <p className="text-center text-black p-2  text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repellendus atque eveniet et fugiat, neque autem voluptatibus eligendi optio blanditiis, alias facilis enim debitis labore nemo, ducimus sapiente illo possimus!
+        <p className="text-center text-black p-2 text-lg">
+          {
+            "I'm Omar. I enjoy building robust, scalable applications from the ground up. Focused on crafting efficient APIs and solid architectures that evolve based on performance metrics and real-world usage. Always deploying."
+          }
         </p>
       </div>
     </section>

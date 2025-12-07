@@ -10,7 +10,7 @@ export default function Home() {
       <HomePage />
       <AboutPage />
       <ProjectsPage />
-      <div className="h-10"></div>
+      <div className="h-30"></div>
       <ContactPage />
     </div>
   );
