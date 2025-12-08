@@ -22,7 +22,7 @@ function HomePage() {
     >
       <div className="">
         <h1 className="text-2xl md:text-4xl font-extrabold ">
-          Back-End Laravel Developer 👋
+          Full-Stack Web Developer 👋
         </h1>
         <p className="py-4 text-xs md:text-sm text-gray-500">
           {
