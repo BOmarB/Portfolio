@@ -9,9 +9,13 @@ export default function Home() {
     <div>
       <HomePage />
       <AboutPage />
+      <div className="h-30"></div>
+
       <ProjectsPage />
       <div className="h-30"></div>
       <ContactPage />
+      <div className="h-30"></div>
+
     </div>
   );
 }

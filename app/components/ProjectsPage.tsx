@@ -1,11 +1,17 @@
-import React from "react";
-import p1 from "@/app/components/Journey.png";
+'use client'
+import examGif from "@/app/components/brave_xPtP8peb86.gif";
 import p2 from "@/app/components/Exam.png";
+import journeyGif from "@/app/components/brave_rnSw4wTJvb.gif";
+import p1 from "@/app/components/Journey.png";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 function ProjectsPage() {
+  const [isHoveredExam, setIsHoveredExam] = useState(false);
+  const [isHoveredJourney, setIsHoveredJourney] = useState(false);
+
   return (
     <section
       id="projects"
@@ -17,21 +23,22 @@ function ProjectsPage() {
           Each project is a unique piece of development
         </p>
       </div>
-      <div className="px-10 flex md:flex-row flex-col gap-8 items-center">
-        <div className="flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-gray-900">
+      <div className="md:px-10 flex md:flex-row flex-col gap-8 items-center">
+       <div className="flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-zinc-900 cursor-pointer" onMouseEnter={() => setIsHoveredExam(true)}
+          onMouseLeave={() => setIsHoveredExam(false)}>
           <Image
-            src={p2}
+            src={isHoveredExam ? examGif : p2}
             alt="p1"
-            width={1300}
+            width={1200}
             height={800}
             quality={100}
-            className="w-[400px] md:w-[500px]  md:h-[300px] object-contain"
+            className="w-[400px] md:w-[500px] md:h-[300px] object-contain"
           />
         </div>
 
         <div className="flex-1">
           <h1 className="text-center text-2xl font-bold mb-4">Examly✒️</h1>
-          <p className="text-center">
+          <p className="text-center text-gray-600">
             Built for educators who want to modernize their testing process.
             This secure examination platform lets teachers create, grade, and
             analyze student performance digitally, while admins manage users
@@ -56,10 +63,10 @@ function ProjectsPage() {
           </div>
         </div>
       </div>
-      <div className="p-10 flex md:flex-row flex-col gap-8 items-center">
+      <div className="py-10 md:p-10 flex md:flex-row flex-col gap-8 items-center">
         <div className="flex-1">
           <h1 className="text-center text-2xl font-bold mb-4">Journey🛄</h1>
-          <p className="text-center">
+          <p className="text-center text-gray-600">
             {
               "Built for curious people who hate decision fatigue. Pick any topic like, Medieval history, AI, detective stories and get three instant recommendations: a movie, a book, and a game. It's that simple. No endless scrolling, just one search and three ways to dive in."
             }
@@ -84,14 +91,16 @@ function ProjectsPage() {
             </a>
           </div>
         </div>
-        <div className="flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-zinc-900">
+        
+        <div className="flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-gray-900 cursor-pointer" onMouseEnter={() => setIsHoveredJourney(true)}
+          onMouseLeave={() => setIsHoveredJourney(false)}>
           <Image
-            src={p1}
+            src={isHoveredJourney ? journeyGif : p1}
             alt="p1"
-            width={1200}
+            width={1300}
             height={800}
             quality={100}
-            className="w-[400px] md:w-[500px] md:h-[300px] object-contain"
+            className="w-[400px] md:w-[500px]  md:h-[300px] object-contain"
           />
         </div>
       </div>
