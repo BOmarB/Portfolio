@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import profile from "./DSC_0025.jpg";
-import { Github, Linkedin } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
   SiHtml5,

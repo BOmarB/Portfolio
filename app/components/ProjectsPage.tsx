@@ -1,7 +1,7 @@
-'use client'
-import examGif from "@/app/components/brave_xPtP8peb86.gif";
+"use client";
+import examGif from "@/app/components/ExamlyGif.gif";
 import p2 from "@/app/components/Exam.png";
-import journeyGif from "@/app/components/brave_rnSw4wTJvb.gif";
+import journeyGif from "@/app/components/JourneyGif.gif";
 import p1 from "@/app/components/Journey.png";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
@@ -24,8 +24,11 @@ function ProjectsPage() {
         </p>
       </div>
       <div className="md:px-10 flex md:flex-row flex-col gap-8 items-center">
-       <div className="flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-zinc-900 cursor-pointer" onMouseEnter={() => setIsHoveredExam(true)}
-          onMouseLeave={() => setIsHoveredExam(false)}>
+        <div
+          className="flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-zinc-900 cursor-pointer"
+          onMouseEnter={() => setIsHoveredExam(true)}
+          onMouseLeave={() => setIsHoveredExam(false)}
+        >
           <Image
             src={isHoveredExam ? examGif : p2}
             alt="p1"
@@ -57,7 +60,10 @@ function ProjectsPage() {
             >
               Code <FaGithub className="w-5 h-5 md:w-6 md:h-6" />
             </a>
-            <a href="" className=" md:text-base text-sm text-gray-700 gap-1 flex hover:underline">
+            <a
+              href=""
+              className=" md:text-base text-sm text-gray-700 gap-1 flex hover:underline"
+            >
               Live Demo <ExternalLink className="w-5 h-5 md:w-6 md:h-6" />
             </a>
           </div>
@@ -91,9 +97,12 @@ function ProjectsPage() {
             </a>
           </div>
         </div>
-        
-        <div className="flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-gray-900 cursor-pointer" onMouseEnter={() => setIsHoveredJourney(true)}
-          onMouseLeave={() => setIsHoveredJourney(false)}>
+
+        <div
+          className="flex-shrink-0 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-gray-900 cursor-pointer"
+          onMouseEnter={() => setIsHoveredJourney(true)}
+          onMouseLeave={() => setIsHoveredJourney(false)}
+        >
           <Image
             src={isHoveredJourney ? journeyGif : p1}
             alt="p1"
