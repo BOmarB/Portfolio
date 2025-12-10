@@ -56,13 +56,13 @@ function ProjectsPage() {
             <a
               href="https://github.com/BOmarB/School_Exams_App"
               className="md:text-base text-sm text-gray-700 gap-1 flex hover:underline"
-              target="_black"
+              target="_blank"
             >
               Code <FaGithub className="w-5 h-5 md:w-6 md:h-6" />
             </a>
             <a
               href="https://examlyfront.vercel.app/"
-              className=" md:text-base text-sm text-gray-700 gap-1 flex hover:underline"
+              className=" md:text-base text-sm text-gray-700 gap-1 flex hover:underline" target="_blank"
             >
               Live Demo <ExternalLink className="w-5 h-5 md:w-6 md:h-6" />
             </a>
@@ -85,13 +85,13 @@ function ProjectsPage() {
             <a
               href="https://github.com/BOmarB"
               className="md:text-base text-sm text-gray-700 gap-1 flex hover:underline"
-              target="_black"
+              target="_blank"
             >
               Code <FaGithub className="w-5 h-5 md:w-6 md:h-6" />
             </a>
             <a
               href=""
-              className="text-gray-700 md:text-base text-sm gap-1 flex hover:underline"
+              className="text-gray-700 md:text-base text-sm gap-1 flex hover:underline" target="_blank"
             >
               Live Demo <ExternalLink className="w-5 h-5 md:w-6 md:h-6" />
             </a>
