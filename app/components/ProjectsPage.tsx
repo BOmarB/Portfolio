@@ -61,7 +61,7 @@ function ProjectsPage() {
               Code <FaGithub className="w-5 h-5 md:w-6 md:h-6" />
             </a>
             <a
-              href="https://backend-api.wuaze.com"
+              href="https://examly.xo.je"
               className=" md:text-base text-sm text-gray-700 gap-1 flex hover:underline" target="_blank"
             >
               Live Demo <ExternalLink className="w-5 h-5 md:w-6 md:h-6" />
