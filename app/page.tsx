@@ -1,21 +1,19 @@
-// import Image from "next/image";
-import AboutPage from "./components/AboutPage";
-import ContactPage from "./components/ContactPage";
-import HomePage from "./components/HomePage";
-import ProjectsPage from "./components/ProjectsPage";
+import Nav from '@/components/Nav';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 export default function Home() {
-  return (
-    <div>
-      <HomePage />
-      <AboutPage />
-      <div className="h-30"></div>
-
-      <ProjectsPage />
-      <div className="h-30"></div>
-      <ContactPage />
-      <div className="h-30"></div>
-
-    </div>
+  return (  
+    <main className="relative bg-bg min-h-screen">
+      <Nav />
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
