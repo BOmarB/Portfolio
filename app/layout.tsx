@@ -39,7 +39,6 @@ export const metadata: Metadata = {
   },
 };
 
-import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
 
 export default function RootLayout({
@@ -49,9 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable} ${dmMono.variable}`}>
-      <body className="bg-bg text-text font-sans selection:bg-amber/30 selection:text-text antialiased">
-        <div className="noise-overlay" />
-        <CustomCursor />
+      <body className="bg-bg text-text font-sans selection:bg-terracotta/20 selection:text-text antialiased">
         <SmoothScroll>
           {children}
         </SmoothScroll>

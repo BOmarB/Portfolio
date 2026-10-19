@@ -2,72 +2,60 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+
+const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 border-t border-border">
+    <section id="contact" className="py-28 md:py-40 border-t border-border">
       <div className="max-w-[1100px] mx-auto px-[5vw]">
-        {/* Section Header */}
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-center gap-3 mb-16 font-mono text-xs uppercase tracking-widest"
+          transition={{ duration: 0.6, ease: EASE }}
+          className="flex items-end gap-5 mb-16 md:mb-24"
         >
-          <span className="text-amber">03 /</span>
-          <span className="text-muted font-bold">Contact</span>
+          <span className="font-syne font-extrabold text-5xl md:text-7xl leading-none text-terracotta">03</span>
+          <h2 className="font-syne font-extrabold text-4xl md:text-6xl uppercase leading-none text-text">Contact</h2>
         </motion.div>
 
-        <div className="max-w-2xl mx-auto flex flex-col items-center text-center gap-10">
+        <div className="max-w-4xl flex flex-col items-start md:items-center text-left md:text-center gap-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as any }}
-            className="font-syne font-bold text-[clamp(1.75rem,5vw,3.5rem)] leading-[1.2] md:leading-[1.1] text-text px-4"
+            transition={{ duration: 0.7, ease: EASE }}
+            className="font-syne font-extrabold text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] text-text"
           >
-            Let&apos;s build <br />
-            something together<span className="text-amber">.</span>
+            Let&apos;s make something
+            <br />
+            <span className="text-stroke">worth showing off.</span>
           </motion.h2>
 
+          <motion.a
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
+            href="mailto:bouazzaouiomar21@gmail.com"
+            className="font-sans text-xl md:text-3xl font-medium text-terracotta underline decoration-terracotta/40 decoration-2 underline-offset-8 transition-[text-decoration-color] hover:decoration-terracotta"
+            style={{ overflowWrap: 'anywhere' }}
+          >
+            bouazzaouiomar21@gmail.com
+          </motion.a>
+
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] as any }}
-            className="font-sans text-muted text-base md:text-lg leading-relaxed max-w-lg px-6"
-          >
-            Have a project in mind or just want to say hi? <br className="hidden sm:block" />
-            Drop me an email — I read every message.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] as any }}
-            className="w-full flex justify-center px-6"
-          >
-            <a 
-              href="mailto:bouazzaouiomar21@gmail.com"
-              className="btn-primary group relative flex items-center justify-center gap-3 md:gap-4 bg-amber text-bg px-6 py-4 md:px-10 md:py-5 rounded-xl font-mono text-[11px] md:text-sm font-semibold tracking-wide transition-all duration-300 w-full md:w-auto overflow-hidden"
-            >
-              <span className="truncate">bouazzaouiomar21@gmail.com</span>
-              <ArrowRight className="size-4 md:size-[18px] transition-transform group-hover:translate-x-1 shrink-0" />
-            </a>
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="flex items-center gap-2 text-text font-mono text-[10px] uppercase tracking-[0.2em] mt-8 font-bold"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex items-center gap-2 text-muted font-mono text-xs uppercase tracking-[0.25em]"
           >
-            <MapPin size={12} className="text-amber" />
-            <span>Azrou, Morocco</span>
-          </motion.div>
+            <MapPin size={14} className="text-sage" />
+            Azrou, Morocco — open to remote work
+          </motion.p>
         </div>
       </div>
     </section>

@@ -1,19 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0f0f13;
-  --bg-2: #16161d;
-  --bg-3: #1e1e28;
-  --border: rgba(255, 255, 255, 0.07);
-  --border-2: rgba(255, 255, 255, 0.12);
-  --text: #f0ede8;
-  --muted: #7a7a8a;
-  --dim: #3a3a4a;
-  --amber: #f5a623;
-  --amber-dim: rgba(245, 166, 35, 0.12);
-  --amber-glow: rgba(245, 166, 35, 0.20);
-  --teal: #2dd4bf;
-  --teal-dim: rgba(45, 212, 191, 0.10);
+  --bg: #171411;
+  --bg-2: #211d18;
+  --bg-3: #2a251f;
+  --border: rgba(240, 233, 223, 0.1);
+  --border-2: rgba(240, 233, 223, 0.2);
+  --text: #f0e9df;
+  --muted: #a89a8a;
+  --dim: #5c5348;
+  --terracotta: #d97a55;
+  --terracotta-dim: rgba(217, 122, 85, 0.14);
+  --sage: #9aaa8c;
+  --sage-dim: rgba(154, 170, 140, 0.14);
 }
 
 @theme {
@@ -25,11 +24,10 @@
   --color-text: var(--text);
   --color-muted: var(--muted);
   --color-dim: var(--dim);
-  --color-amber: var(--amber);
-  --color-amber-dim: var(--amber-dim);
-  --color-amber-glow: var(--amber-glow);
-  --color-teal: var(--teal);
-  --color-teal-dim: var(--teal-dim);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-dim: var(--terracotta-dim);
+  --color-sage: var(--sage);
+  --color-sage-dim: var(--sage-dim);
 
   --font-syne: "Syne", sans-serif;
   --font-sans: "DM Sans", sans-serif;
@@ -41,7 +39,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-bg text-text font-sans selection:bg-amber/30 selection:text-text;
+    @apply bg-bg text-text font-sans selection:bg-terracotta/20 selection:text-text;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -52,7 +50,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -60,18 +58,22 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--amber);
+  background: var(--terracotta);
   border-radius: 10px;
-  border: 4px solid var(--bg);
+  border: 3px solid var(--bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffb84d;
+  background: #e88b66;
 }
 
-/* Custom Utilities */
 .text-stroke {
-  -webkit-text-stroke: 1.5px rgba(240, 237, 232, 0.25);
+  -webkit-text-stroke: 1.5px var(--terracotta);
+  color: transparent;
+}
+
+.text-stroke-soft {
+  -webkit-text-stroke: 1px rgba(240, 233, 223, 0.14);
   color: transparent;
 }
 
@@ -82,28 +84,13 @@ html {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--amber);
+  background: var(--terracotta);
   transition: width 0.25s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
-}
-
-.skill-tag {
-  transition: background 0.2s, transform 0.2s;
-}
-
-.skill-tag:hover {
-  transform: translateY(-2px);
-}
-
-.project-image {
-  transition: transform 0.5s ease;
-}
-
-.project-card:hover .project-image {
-  transform: scale(1.04);
 }
 
 .btn-primary {
@@ -111,8 +98,8 @@ html {
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(245, 166, 35, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(217, 122, 85, 0.28);
 }
 
 @keyframes pulse {
@@ -124,34 +111,11 @@ html {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.noise-overlay {
-  position: fixed;
-  inset: -200%;
-  width: 400%;
-  height: 400%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3BaseFilter id='filter'%3BfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23filter)'/%3E%3C/svg%3E");
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: 9998;
-  animation: noise 0.2s infinite;
+@keyframes bounce-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }
 
-@keyframes noise {
-  0% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -5%); }
-  20% { transform: translate(-10%, 5%); }
-  30% { transform: translate(5%, -10%); }
-  40% { transform: translate(-5%, 15%); }
-  50% { transform: translate(-10%, 5%); }
-  60% { transform: translate(15%, 0); }
-  70% { transform: translate(0, 10%); }
-  80% { transform: translate(-15%, 0); }
-  90% { transform: translate(10%, 5%); }
-  100% { transform: translate(5%, 0); }
-}
-
-@media (min-width: 768px) {
-  * {
-    cursor: none !important;
-  }
+.animate-bounce-y {
+  animation: bounce-y 1.6s ease-in-out infinite;
 }
